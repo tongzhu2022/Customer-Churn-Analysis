@@ -1,8 +1,8 @@
 # Maven-Churn-Analysis
 
-In this project I performed the churn analysis using SQL (mySQL), you can find the dataset from [Telecom Customer Churn](https://www.mavenanalytics.io/data-playground?search=churn) from Maven
+In this project I performed the churn analysis using SQL (mySQL), you can find the dataset from [Telecom Customer Churn](https://www.mavenanalytics.io/data-playground?search=churn)<br><br>
 
-- I started with checking duplicated `customer_id` from the dataset:<br>
+- I started with checking duplicated `customer_id` from the dataset<br>
   <img width="374" alt="image" src="https://user-images.githubusercontent.com/127678136/230798400-36790af9-53b0-4ae5-8a99-d52b9582c107.png"><br>
   It turns out that there is no duplicated `customer_id` in this dataset<br><br>
   
