@@ -1,4 +1,4 @@
-# Maven-Churn-Analysis
+# Maven Churn Analysis
 
 In this project I performed the churn analysis using SQL (mySQL), you can find the dataset from [Telecom Customer Churn](https://www.mavenanalytics.io/data-playground?search=churn)<br><br>
 
