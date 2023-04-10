@@ -28,7 +28,7 @@ In this project I performed the churn analysis using SQL (mySQL), you can find t
   
 - Detailed reason for churn<br>
   <img width="895" alt="image" src="https://user-images.githubusercontent.com/127678136/230809622-b814dd73-95c9-47bb-9a98-97e1e7af1bbf.png"><br>
-  <img width="480" alt="image" src="https://user-images.githubusercontent.com/127678136/230813707-8675cdca-4eea-4875-92b8-9ceed4cc8932.png"><br>
+  <img width="484" alt="image" src="https://user-images.githubusercontent.com/127678136/230817025-5d4a5686-8736-4d46-a60d-f5679414589e.png"><br>
   Both 'Competitor made better offer' and 'Competitor had better device' were identified as top reasons for customer churn<br><br>
   
 - What offers were made to customers who have churned<br>
