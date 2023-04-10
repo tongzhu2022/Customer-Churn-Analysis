@@ -50,6 +50,13 @@ In this project I performed the churn analysis using SQL (mySQL), you can find t
   <img width="896" alt="image" src="https://user-images.githubusercontent.com/127678136/230816055-a28110d1-3422-440f-a060-ba489b95407a.png"><br>
   <img width="325" alt="image" src="https://user-images.githubusercontent.com/127678136/230816100-a812f89a-53ee-46f7-88bc-e28481c532bf.png"><br>
   Customers on a short contract(Month-to-Month) are more likely to churn<br><br>
+  
+- Did churned customers have premium tech support?<br>
+  <img width="897" alt="image" src="https://user-images.githubusercontent.com/127678136/230816455-1872527a-e7f4-4dde-bfad-e784162eeb55.png"><br>
+  <img width="378" alt="image" src="https://user-images.githubusercontent.com/127678136/230816517-f0fffe6d-11fe-4dd1-b0e4-a03083eb21de.png"><br>
+  77.4% churned customers does not have access to premium tech support. Improving this service could potentially make a significant difference in reducing customer churn<br><br>
+
+
 
 
 
