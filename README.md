@@ -6,7 +6,7 @@ In this project I performed the churn analysis using SQL (mySQL), you can find t
   <img width="374" alt="image" src="https://user-images.githubusercontent.com/127678136/230798400-36790af9-53b0-4ae5-8a99-d52b9582c107.png"><br>
   It turns out that there is no duplicated `customer_id` in this dataset<br><br>
   
-- How much revenue did Maven lost due to customer churn?<br>
+- How much revenue did Maven lost due to churned customers?<br>
   <img width="939" alt="image" src="https://user-images.githubusercontent.com/127678136/230798622-bd143ad2-4658-4e22-8af1-8ad24b233e8c.png"><br>
   <img width="504" alt="image" src="https://user-images.githubusercontent.com/127678136/230799125-4944d58b-18c0-4e9f-b609-f37351c00d46.png"><br>
   Maven has experienced a loss of 1869 customers, resulting in a loss of over 3 million dollars (17.2% of its total revenue)<br><br>
@@ -28,8 +28,37 @@ In this project I performed the churn analysis using SQL (mySQL), you can find t
   
 - Detailed reason for churn<br>
   <img width="895" alt="image" src="https://user-images.githubusercontent.com/127678136/230809622-b814dd73-95c9-47bb-9a98-97e1e7af1bbf.png"><br>
-  <img width="481" alt="image" src="https://user-images.githubusercontent.com/127678136/230809868-bc3fbeea-010a-43c9-8953-3824218201b1.png"><br>
+  <img width="480" alt="image" src="https://user-images.githubusercontent.com/127678136/230813707-8675cdca-4eea-4875-92b8-9ceed4cc8932.png"><br>
   Both 'Competitor made better offer' and 'Competitor had better device' were identified as top reasons for customer churn<br><br>
+  
+- What offers were made to customers who have churned<br>
+  <img width="902" alt="image" src="https://user-images.githubusercontent.com/127678136/230814381-45df2ee4-35b1-419d-85dc-f2cbf529a257.png"><br>
+  <img width="196" alt="image" src="https://user-images.githubusercontent.com/127678136/230814506-a4cab9a9-7830-49d9-ae0e-d6bf8aef85f1.png"><br>
+  Most of the churned customers (56.2%) did not receive any offer<br><br>
+  
+- What internet did the churned customers have?<br>
+  <img width="899" alt="image" src="https://user-images.githubusercontent.com/127678136/230815006-addb34f8-1f1c-4de3-95ab-655f9553c5df.png"><br>
+  <img width="313" alt="image" src="https://user-images.githubusercontent.com/127678136/230815132-bbd59ed4-0f0c-489b-8e69-df4bd3656a94.png"><br>
+  66.1% of the churned customers were using Fiber Optic internet<br><br>
+  
+- What internet type did 'Competitor' churners have?<br>
+  <img width="897" alt="image" src="https://user-images.githubusercontent.com/127678136/230815521-b4c287de-8f18-456e-b27a-d7ce121896f7.png"><br>
+  <img width="419" alt="image" src="https://user-images.githubusercontent.com/127678136/230815892-93f6f0c6-8bfc-412e-b8a8-e587033c8332.png"><br>
+  69.8% of the customers left for competitor's Fiber Optic, indicating that there might be a quality issue with Maven's Fiber Optic internet<br><br>
+  
+- What type of contract were churned customers on?<br>
+  <img width="896" alt="image" src="https://user-images.githubusercontent.com/127678136/230816055-a28110d1-3422-440f-a060-ba489b95407a.png"><br>
+  <img width="325" alt="image" src="https://user-images.githubusercontent.com/127678136/230816100-a812f89a-53ee-46f7-88bc-e28481c532bf.png"><br>
+  Customers on a short contract(Month-to-Month) are more likely to churn<br><br>
+
+
+
+
+
+
+
+  
+
   
 
 
