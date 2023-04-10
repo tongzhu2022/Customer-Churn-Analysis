@@ -11,7 +11,6 @@ In this project I performed the churn analysis using SQL (mySQL), you can find t
   <img width="504" alt="image" src="https://user-images.githubusercontent.com/127678136/230799125-4944d58b-18c0-4e9f-b609-f37351c00d46.png"><br>
   Maven has experienced a loss of 1869 customers, resulting in a loss of over 3 million dollars (17.2% of its total revenue)<br><br>
 
-
 - What is the typical tenure for churned customers?<br>
   <img width="897" alt="image" src="https://user-images.githubusercontent.com/127678136/230799319-45f6685c-19d8-4ea3-8d14-315a0e6fd252.png"><br>
   <img width="240" alt="image" src="https://user-images.githubusercontent.com/127678136/230799339-f6346860-43c2-4c8b-b2c9-e1840fdc0f55.png"><br>
@@ -21,6 +20,23 @@ In this project I performed the churn analysis using SQL (mySQL), you can find t
   <img width="740" alt="image" src="https://user-images.githubusercontent.com/127678136/230807704-55b1b8b7-7cb7-4718-b606-7dbd2cfed2c1.png"><br>
   <img width="277" alt="image" src="https://user-images.githubusercontent.com/127678136/230807818-be341f2f-c39e-4ac1-bebd-e8b899f588ac.png"><br>
   San Diego had the highest churn rate (64.9%), indicating that more than half of the customers have left Maven<br><br>
+  
+- Breakdown of customers who have churned<br>
+  <img width="883" alt="image" src="https://user-images.githubusercontent.com/127678136/230809049-ec8bf059-9cda-4b71-b4d2-8555ceac44e9.png"><br>
+  <img width="374" alt="image" src="https://user-images.githubusercontent.com/127678136/230809120-686bbad4-9a44-492e-8139-a61d8cb6d9d6.png"><br>
+  About 45% of the customers listed 'Competitor' as their reason for leaving Maven<br><br>
+  
+- Detailed reason for churn<br>
+  <img width="895" alt="image" src="https://user-images.githubusercontent.com/127678136/230809622-b814dd73-95c9-47bb-9a98-97e1e7af1bbf.png"><br>
+  <img width="481" alt="image" src="https://user-images.githubusercontent.com/127678136/230809868-bc3fbeea-010a-43c9-8953-3824218201b1.png"><br>
+  Both 'Competitor made better offer' and 'Competitor had better device' were identified as top reasons for customer churn<br><br>
+  
+
+
+  
+
+
+  
 
   
 
