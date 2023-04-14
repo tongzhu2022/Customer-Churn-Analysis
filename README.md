@@ -20,7 +20,7 @@ SELECT customer_status,
 FROM telecom.telecom_customer_churn
 GROUP BY customer_status;
 ```
-<img width="515" alt="image" src="https://user-images.githubusercontent.com/127678136/232131736-cb6f2f1f-b75d-49e9-817a-ca4c15434333.png">
+<img width="515" alt="image" src="https://user-images.githubusercontent.com/127678136/232131736-cb6f2f1f-b75d-49e9-817a-ca4c15434333.png"><br>
 Maven has experienced a loss of 1869 customers, resulting in a loss of over 3 million dollars (17.2% of its total revenue)<br><br>
 
 - What is the typical tenure for churned customers?
@@ -36,8 +36,7 @@ WHERE customer_status = 'Churned'
 GROUP BY tenure_length
 ORDER BY churn_percentage DESC;
 ```
-  <img width="897" alt="image" src="https://user-images.githubusercontent.com/127678136/230799319-45f6685c-19d8-4ea3-8d14-315a0e6fd252.png"><br>
-  <img width="240" alt="image" src="https://user-images.githubusercontent.com/127678136/230799339-f6346860-43c2-4c8b-b2c9-e1840fdc0f55.png"><br>
+<img width="240" alt="image" src="https://user-images.githubusercontent.com/127678136/230799339-f6346860-43c2-4c8b-b2c9-e1840fdc0f55.png"><br>
 The majority of the customers who churned from Maven (31.9%), had only been with the company for a duration of three months or less. Additionally, the second largest group of customers who churned (28.8%), were loyal customers who had been with Maven for over two years.<br><br>
 
 - Which cities had the highest churn rate?<br>
