@@ -42,10 +42,10 @@ The majority of the customers who churned from Maven (31.9%), had only been with
 - Which cities had the highest churn rate?
 ```sql
 SELECT city,
-	   COUNT(CASE WHEN customer_status = 'Churned' THEN customer_id
-			 ELSE NULL END) AS churned,
+       COUNT(CASE WHEN customer_status = 'Churned' THEN customer_id
+	     ELSE NULL END) AS churned,
        ROUND(COUNT(CASE WHEN customer_status = 'Churned' THEN customer_id
-				   ELSE NULL END)*100 / COUNT(customer_id), 1) AS churn_rate
+	     ELSE NULL END)*100 / COUNT(customer_id), 1) AS churn_rate
 FROM telecom.telecom_customer_churn
 GROUP BY city
 HAVING churned > 10
@@ -58,7 +58,7 @@ San Diego had the highest churn rate (64.9%), indicating that more than half of 
 - Breakdown of customers who have churned<br>
 ```sql
 SELECT churn_category,
-	   ROUND(SUM(total_revenue),1) AS churn_revenue,
+       ROUND(SUM(total_revenue),1) AS churn_revenue,
        ROUND(COUNT(customer_id)*100 / SUM(COUNT(customer_id)) OVER(), 1)AS churn_percentage
 FROM telecom.telecom_customer_churn
 WHERE customer_status = 'Churned'
@@ -69,9 +69,17 @@ ORDER BY churn_revenue DESC;
 About 45% of the customers listed 'Competitor' as their reason for leaving Maven<br><br>
   
 - Detailed reason for churn<br>
-  <img width="895" alt="image" src="https://user-images.githubusercontent.com/127678136/230809622-b814dd73-95c9-47bb-9a98-97e1e7af1bbf.png"><br>
-  <img width="484" alt="image" src="https://user-images.githubusercontent.com/127678136/230817025-5d4a5686-8736-4d46-a60d-f5679414589e.png"><br>
-  Both 'Competitor made better offer' and 'Competitor had better device' were identified as top reasons for customer churn<br><br>
+```
+SELECT churn_category,
+       ROUND(SUM(total_revenue),1) AS churn_revenue,
+       ROUND(COUNT(customer_id)*100 / SUM(COUNT(customer_id)) OVER(), 1)AS churn_percentage
+FROM telecom.telecom_customer_churn
+WHERE customer_status = 'Churned'
+GROUP BY churn_category
+ORDER BY churn_revenue DESC;
+```
+<img width="484" alt="image" src="https://user-images.githubusercontent.com/127678136/230817025-5d4a5686-8736-4d46-a60d-f5679414589e.png"><br>
+Both 'Competitor made better offer' and 'Competitor had better device' were identified as top reasons for customer churn<br><br>
   
 - What offers were made to customers who have churned<br>
   <img width="902" alt="image" src="https://user-images.githubusercontent.com/127678136/230814381-45df2ee4-35b1-419d-85dc-f2cbf529a257.png"><br>
