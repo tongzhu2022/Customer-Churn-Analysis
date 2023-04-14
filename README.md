@@ -40,7 +40,7 @@ ORDER BY churn_percentage DESC;
 The majority of the customers who churned from Maven (31.9%), had only been with the company for a duration of three months or less. Additionally, the second largest group of customers who churned (28.8%), were loyal customers who had been with Maven for over two years.<br><br>
 
 - Which cities had the highest churn rate?
-```
+```sql
 SELECT city,
 	   COUNT(CASE WHEN customer_status = 'Churned' THEN customer_id
 			 ELSE NULL END) AS churned,
@@ -56,7 +56,7 @@ LIMIT 5;
 San Diego had the highest churn rate (64.9%), indicating that more than half of the customers have left Maven<br><br>
   
 - Breakdown of customers who have churned<br>
-```
+```sql
 SELECT churn_category,
 	   ROUND(SUM(total_revenue),1) AS churn_revenue,
        ROUND(COUNT(customer_id)*100 / SUM(COUNT(customer_id)) OVER(), 1)AS churn_percentage
