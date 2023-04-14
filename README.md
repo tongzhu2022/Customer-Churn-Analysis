@@ -30,7 +30,7 @@ SELECT CASE WHEN tenure_in_months <= 3 THEN '3 months'
 	    WHEN tenure_in_months <= 12 THEN '1 year'
             WHEN tenure_in_months <= 24 THEN '2 years'
             ELSE '2 years +' END AS tenure_length,
-        ROUND(COUNT(customer_id)*100 / SUM(COUNT(customer_id)) OVER(), 1) AS churn_percentage
+       ROUND(COUNT(customer_id)*100 / SUM(COUNT(customer_id)) OVER(), 1) AS churn_percentage
 FROM telecom.telecom_customer_churn
 WHERE customer_status = 'Churned'
 GROUP BY tenure_length
