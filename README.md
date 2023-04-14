@@ -145,28 +145,3 @@ ORDER BY churn_percentage DESC;
 ```
 <img width="378" alt="image" src="https://user-images.githubusercontent.com/127678136/230816517-f0fffe6d-11fe-4dd1-b0e4-a03083eb21de.png"><br>
 77.4% churned customers does not have access to premium tech support. Improving this service could potentially make a significant difference in reducing customer churn<br><br>
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-
-  
-
-
-  
-
-  
-
-
-
-
-
