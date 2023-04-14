@@ -3,13 +3,13 @@
 In this project I performed the churn analysis using SQL (mySQL), you can find the dataset from [Telecom Customer Churn](https://www.mavenanalytics.io/data-playground?search=churn)<br><br>
 
 - I started with checking duplicated `customer_id` from the dataset<br>
-  ```sql
-  SELECT customer_id, COUNT(*) as count
-  FROM telecom.telecom_customer_churn
-  GROUP BY customer_id
-  HAVING COUNT(customer_id) > 1;
-  ```
-  It turns out that there is no duplicated `customer_id` in this dataset<br><br>
+```sql
+SELECT customer_id, COUNT(*) as count
+FROM telecom.telecom_customer_churn
+GROUP BY customer_id
+HAVING COUNT(customer_id) > 1;
+```
+It turns out that there is no duplicated `customer_id` in this dataset<br><br>
   
 - How much revenue did Maven lost due to churned customers?<br>
   <img width="939" alt="image" src="https://user-images.githubusercontent.com/127678136/230798622-bd143ad2-4658-4e22-8af1-8ad24b233e8c.png"><br>
