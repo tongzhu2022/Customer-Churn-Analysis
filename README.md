@@ -3,6 +3,12 @@
 In this project I performed the churn analysis using SQL (mySQL), you can find the dataset from [Telecom Customer Churn](https://www.mavenanalytics.io/data-playground?search=churn)<br><br>
 
 - I started with checking duplicated `customer_id` from the dataset<br>
+```sql
+SELECT customer_id, COUNT(*) as count
+FROM telecom.telecom_customer_churn
+GROUP BY customer_id
+HAVING COUNT(customer_id) > 1;
+```
   <img width="369" alt="image" src="https://user-images.githubusercontent.com/127678136/230819151-55f304bd-c849-42c4-9cfc-4402165ddd15.png"><br>
   It turns out that there is no duplicated `customer_id` in this dataset<br><br>
   
