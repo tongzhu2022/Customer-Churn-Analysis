@@ -9,7 +9,7 @@ FROM telecom.telecom_customer_churn
 GROUP BY customer_id
 HAVING COUNT(customer_id) > 1;
 ```
-It turns out that there is no duplicated `customer_id` in this dataset<br>
+It turns out that there is no duplicated `customer_id` in this dataset<br><br>
   
 - How much revenue did Maven lost due to churned customers?
 ```sql
@@ -56,9 +56,17 @@ LIMIT 5;
 San Diego had the highest churn rate (64.9%), indicating that more than half of the customers have left Maven<br><br>
   
 - Breakdown of customers who have churned<br>
-  <img width="883" alt="image" src="https://user-images.githubusercontent.com/127678136/230809049-ec8bf059-9cda-4b71-b4d2-8555ceac44e9.png"><br>
-  <img width="374" alt="image" src="https://user-images.githubusercontent.com/127678136/230809120-686bbad4-9a44-492e-8139-a61d8cb6d9d6.png"><br>
-  About 45% of the customers listed 'Competitor' as their reason for leaving Maven<br><br>
+```
+SELECT churn_category,
+	   ROUND(SUM(total_revenue),1) AS churn_revenue,
+       ROUND(COUNT(customer_id)*100 / SUM(COUNT(customer_id)) OVER(), 1)AS churn_percentage
+FROM telecom.telecom_customer_churn
+WHERE customer_status = 'Churned'
+GROUP BY churn_category
+ORDER BY churn_revenue DESC;
+```
+<img width="374" alt="image" src="https://user-images.githubusercontent.com/127678136/230809120-686bbad4-9a44-492e-8139-a61d8cb6d9d6.png"><br>
+About 45% of the customers listed 'Competitor' as their reason for leaving Maven<br><br>
   
 - Detailed reason for churn<br>
   <img width="895" alt="image" src="https://user-images.githubusercontent.com/127678136/230809622-b814dd73-95c9-47bb-9a98-97e1e7af1bbf.png"><br>
