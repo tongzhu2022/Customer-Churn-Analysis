@@ -2,19 +2,27 @@
 
 In this project I performed the churn analysis using SQL (mySQL), you can find the dataset from [Telecom Customer Churn](https://www.mavenanalytics.io/data-playground?search=churn)<br><br>
 
-- I started with checking duplicated `customer_id` from the dataset<br>
+- I started with checking duplicated `customer_id` from the dataset
 ```sql
 SELECT customer_id, COUNT(*) as count
 FROM telecom.telecom_customer_churn
 GROUP BY customer_id
 HAVING COUNT(customer_id) > 1;
 ```
-It turns out that there is no duplicated `customer_id` in this dataset<br><br>
+It turns out that there is no duplicated `customer_id` in this dataset<br>
   
-- How much revenue did Maven lost due to churned customers?<br>
+- How much revenue did Maven lost due to churned customers?
+```
+SELECT customer_status,
+	   COUNT(customer_id) AS customer_count,
+       ROUND(SUM(total_revenue), 1) AS total_revenue,
+       ROUND((SUM(total_revenue)*100) / SUM(SUM(total_revenue)) OVER(), 1) AS revenue_percentage
+FROM telecom.telecom_customer_churn
+GROUP BY customer_status;
+```
   <img width="939" alt="image" src="https://user-images.githubusercontent.com/127678136/230798622-bd143ad2-4658-4e22-8af1-8ad24b233e8c.png"><br>
   <img width="504" alt="image" src="https://user-images.githubusercontent.com/127678136/230799125-4944d58b-18c0-4e9f-b609-f37351c00d46.png"><br>
-  Maven has experienced a loss of 1869 customers, resulting in a loss of over 3 million dollars (17.2% of its total revenue)<br><br>
+Maven has experienced a loss of 1869 customers, resulting in a loss of over 3 million dollars (17.2% of its total revenue)<br><br>
 
 - What is the typical tenure for churned customers?<br>
   <img width="897" alt="image" src="https://user-images.githubusercontent.com/127678136/230799319-45f6685c-19d8-4ea3-8d14-315a0e6fd252.png"><br>
