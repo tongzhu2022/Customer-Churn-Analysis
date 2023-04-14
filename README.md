@@ -82,7 +82,7 @@ ORDER BY churn_revenue DESC;
 Both 'Competitor made better offer' and 'Competitor had better device' were identified as top reasons for customer churn<br><br>
   
 - What offers were made to customers who have churned
-```
+```sql
 SELECT offer,
        ROUND(COUNT(customer_id)*100 / SUM(COUNT(customer_id)) OVER(), 1) AS churn_percentage
 FROM telecom.telecom_customer_churn
@@ -94,7 +94,7 @@ ORDER BY churn_percentage DESC;
 Most of the churned customers (56.2%) did not receive any offer<br><br>
   
 - What internet did the churned customers have?
-```
+```sql
 SELECT internet_type,
        COUNT(customer_id) AS churned,
        ROUND(COUNT(customer_id)*100 / SUM(COUNT(customer_id)) OVER(), 1) AS churn_percentage
@@ -107,7 +107,7 @@ ORDER BY churn_percentage DESC;
 66.1% of the churned customers were using Fiber Optic internet<br><br>
   
 - What internet type did 'Competitor' churners have?
-```
+```sql
 SELECT internet_type,
        churn_category,
        COUNT(customer_id) AS churned,
@@ -121,7 +121,7 @@ ORDER BY churn_percentage DESC;
 69.8% of the customers left for competitor's Fiber Optic, indicating that there might be a quality issue with Maven's Fiber Optic internet<br><br>
   
 - What type of contract were churned customers on?
-```
+```sql
 SELECT contract,
        COUNT(customer_id) AS churned,
        ROUND(COUNT(customer_id)*100 / SUM(COUNT(customer_id)) OVER(), 1) AS churn_percentage
@@ -134,7 +134,7 @@ ORDER BY churn_percentage DESC;
 Customers on a short contract(Month-to-Month) are more likely to churn<br><br>
   
 - Did churned customers have premium tech support?
-```
+```sql
 SELECT premium_tech_support,
 	   COUNT(customer_id) AS churned,
        ROUND(COUNT(customer_id)*100 / SUM(COUNT(customer_id)) OVER(), 1) AS churn_percentage
