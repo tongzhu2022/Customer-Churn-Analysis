@@ -9,8 +9,7 @@ FROM telecom.telecom_customer_churn
 GROUP BY customer_id
 HAVING COUNT(customer_id) > 1;
 ```
-  <img width="369" alt="image" src="https://user-images.githubusercontent.com/127678136/230819151-55f304bd-c849-42c4-9cfc-4402165ddd15.png"><br>
-  It turns out that there is no duplicated `customer_id` in this dataset<br><br>
+It turns out that there is no duplicated `customer_id` in this dataset<br><br>
   
 - How much revenue did Maven lost due to churned customers?<br>
   <img width="939" alt="image" src="https://user-images.githubusercontent.com/127678136/230798622-bd143ad2-4658-4e22-8af1-8ad24b233e8c.png"><br>
