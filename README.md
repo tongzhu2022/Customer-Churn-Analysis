@@ -20,6 +20,7 @@ SELECT customer_status,
 FROM telecom.telecom_customer_churn
 GROUP BY customer_status;
 ```
+<img width="515" alt="image" src="https://user-images.githubusercontent.com/127678136/232131736-cb6f2f1f-b75d-49e9-817a-ca4c15434333.png">
 Maven has experienced a loss of 1869 customers, resulting in a loss of over 3 million dollars (17.2% of its total revenue)<br><br>
 
 - What is the typical tenure for churned customers?
