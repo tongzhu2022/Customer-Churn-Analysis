@@ -39,10 +39,21 @@ ORDER BY churn_percentage DESC;
 <img width="240" alt="image" src="https://user-images.githubusercontent.com/127678136/230799339-f6346860-43c2-4c8b-b2c9-e1840fdc0f55.png"><br>
 The majority of the customers who churned from Maven (31.9%), had only been with the company for a duration of three months or less. Additionally, the second largest group of customers who churned (28.8%), were loyal customers who had been with Maven for over two years.<br><br>
 
-- Which cities had the highest churn rate?<br>
-  <img width="740" alt="image" src="https://user-images.githubusercontent.com/127678136/230807704-55b1b8b7-7cb7-4718-b606-7dbd2cfed2c1.png"><br>
-  <img width="277" alt="image" src="https://user-images.githubusercontent.com/127678136/230807818-be341f2f-c39e-4ac1-bebd-e8b899f588ac.png"><br>
-  San Diego had the highest churn rate (64.9%), indicating that more than half of the customers have left Maven<br><br>
+- Which cities had the highest churn rate?
+```
+SELECT city,
+	   COUNT(CASE WHEN customer_status = 'Churned' THEN customer_id
+			 ELSE NULL END) AS churned,
+       ROUND(COUNT(CASE WHEN customer_status = 'Churned' THEN customer_id
+				   ELSE NULL END)*100 / COUNT(customer_id), 1) AS churn_rate
+FROM telecom.telecom_customer_churn
+GROUP BY city
+HAVING churned > 10
+ORDER BY churn_rate DESC
+LIMIT 5;
+```
+<img width="277" alt="image" src="https://user-images.githubusercontent.com/127678136/230807818-be341f2f-c39e-4ac1-bebd-e8b899f588ac.png"><br>
+San Diego had the highest churn rate (64.9%), indicating that more than half of the customers have left Maven<br><br>
   
 - Breakdown of customers who have churned<br>
   <img width="883" alt="image" src="https://user-images.githubusercontent.com/127678136/230809049-ec8bf059-9cda-4b71-b4d2-8555ceac44e9.png"><br>
